@@ -1,0 +1,7 @@
+{
+  "min_tier": "ss_da_ji",
+  "max_tier": "da_ji",
+  "poem": ["仙风道骨步青云", "一剑霜寒定乾坤"],
+  "explain": "气势如虹，宜征伐破敌。",
+  "prefer_yi": ["zhengfa"]
+}

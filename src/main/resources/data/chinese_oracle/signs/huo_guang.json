@@ -1,0 +1,7 @@
+{
+  "min_tier": "zhong_ji",
+  "max_tier": "xiao_ji",
+  "poem": ["火光冲天熔石玉", "矿脉深处见真金"],
+  "explain": "气运兴旺，宜开矿动土。",
+  "prefer_yi": ["kaikuang"]
+}

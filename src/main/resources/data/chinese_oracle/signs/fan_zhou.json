@@ -1,0 +1,6 @@
+{
+  "min_tier": "zhong_ji",
+  "max_tier": "xiao_ji",
+  "poem": ["一帆风顺千帆竞", "逆水行舟更要勤"],
+  "explain": "宜进取，忌懈怠。"
+}

@@ -1,0 +1,7 @@
+{
+  "min_tier": "zhong_ji",
+  "max_tier": "xiao_ji",
+  "poem": ["生意兴隆通四海", "财源茂盛达三江"],
+  "explain": "财运亨通，宜交易买卖。",
+  "prefer_yi": ["qiucai"]
+}

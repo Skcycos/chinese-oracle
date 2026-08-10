@@ -1,0 +1,8 @@
+{
+  "category": "yi",
+  "name": "开矿",
+  "effects": {
+    "mining_speed": 0.10,
+    "ore_bonus": 0.05
+  }
+}

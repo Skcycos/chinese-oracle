@@ -1,0 +1,7 @@
+{
+  "min_tier": "ping",
+  "max_tier": "xiao_xiong",
+  "poem": ["岸上观鱼心自闲", "莫向波心抛钓竿"],
+  "explain": "水气不聚，忌渔猎。",
+  "prefer_ji": ["muyu_ji"]
+}

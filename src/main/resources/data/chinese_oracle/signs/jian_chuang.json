@@ -1,0 +1,7 @@
+{
+  "min_tier": "xiao_xiong",
+  "max_tier": "zhong_xiong",
+  "poem": ["莫移卧床动根基", "一宵惊醒不安宁"],
+  "explain": "床位不宜动，动则眠不安。",
+  "prefer_ji": ["anchuang"]
+}

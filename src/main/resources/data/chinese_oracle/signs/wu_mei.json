@@ -1,0 +1,7 @@
+{
+  "min_tier": "ping",
+  "max_tier": "zhong_ji",
+  "poem": ["午寐正酣梦悠长", "养精蓄锐待夕阳"],
+  "explain": "宜午间小憩，安眠养神。",
+  "prefer_yi": ["anmian"]
+}

@@ -1,0 +1,6 @@
+{
+  "min_tier": "ping",
+  "max_tier": "zhong_ji",
+  "poem": ["守株待兔终无果", "勤耕细作有收成"],
+  "explain": "宜勤勉积累，勿心存侥幸。"
+}

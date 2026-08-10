@@ -1,0 +1,6 @@
+{
+  "min_tier": "zhong_xiong",
+  "max_tier": "xiao_xiong",
+  "poem": ["山雨欲来风满楼", "闭户添衣莫远游"],
+  "explain": "宜避风头，忌开张。"
+}

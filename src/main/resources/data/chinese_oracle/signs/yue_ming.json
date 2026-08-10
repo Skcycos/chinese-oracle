@@ -1,0 +1,6 @@
+{
+  "min_tier": "zhong_ji",
+  "max_tier": "ping",
+  "poem": ["月朗风清夜读书", "灯下心事自通疏"],
+  "explain": "宜静思学习，勿扰他人。"
+}

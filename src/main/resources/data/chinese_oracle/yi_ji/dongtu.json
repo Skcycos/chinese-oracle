@@ -1,0 +1,8 @@
+{
+  "category": "ji",
+  "name": "忌动土",
+  "effects": {
+    "mining_speed": 0.10,
+    "ore_bonus": 0.05
+  }
+}

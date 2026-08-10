@@ -1,0 +1,6 @@
+{
+  "min_tier": "xiao_xiong",
+  "max_tier": "zhong_xiong",
+  "poem": ["风起青萍之末时", "莫等浪高再回头"],
+  "explain": "小有风波，宜早做打算。"
+}

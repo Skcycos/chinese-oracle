@@ -1,0 +1,7 @@
+{
+  "category": "ji",
+  "name": "忌祈福",
+  "effects": {
+    "incoming_damage": 0.03
+  }
+}

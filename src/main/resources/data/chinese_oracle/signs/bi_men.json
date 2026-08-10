@@ -1,0 +1,7 @@
+{
+  "min_tier": "xiao_xiong",
+  "max_tier": "zhong_xiong",
+  "poem": ["闭门谢客养精神", "门外风雨莫沾身"],
+  "explain": "宜居家守拙，忌远行。",
+  "prefer_ji": ["yuanxing_ji"]
+}

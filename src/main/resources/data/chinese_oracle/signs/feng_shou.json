@@ -1,0 +1,7 @@
+{
+  "min_tier": "zhong_ji",
+  "max_tier": "ping",
+  "poem": ["丰收满仓谷满囤", "汗滴禾下土生金"],
+  "explain": "耕耘有成，宜开矿渔猎。",
+  "prefer_yi": ["kaikuang", "muyu"]
+}

@@ -1,0 +1,7 @@
+{
+  "min_tier": "xiao_ji",
+  "max_tier": "ping",
+  "poem": ["鱼翔浅底弄清波", "一竿钓尽满江秋"],
+  "explain": "水运当旺，宜渔猎垂钓。",
+  "prefer_yi": ["muyu"]
+}

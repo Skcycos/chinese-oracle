@@ -1,0 +1,8 @@
+{
+  "min_tier": "xiao_xiong",
+  "max_tier": "da_xiong",
+  "poem": ["静心养性如止水", "任他风浪起千层"],
+  "explain": "宜安眠静养，忌争斗生事。",
+  "prefer_yi": ["anmian"],
+  "prefer_ji": ["zhengdou"]
+}

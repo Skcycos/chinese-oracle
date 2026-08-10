@@ -1,0 +1,7 @@
+{
+  "min_tier": "zhong_ji",
+  "max_tier": "ping",
+  "poem": ["烟火人间最可亲", "一砖一瓦筑新家"],
+  "explain": "宜营造建房，添砖加瓦。",
+  "prefer_yi": ["yingzao"]
+}

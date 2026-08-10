@@ -1,0 +1,6 @@
+{
+  "min_tier": "zhong_ji",
+  "max_tier": "da_ji",
+  "poem": ["春风得意马蹄疾", "一日看尽长安花"],
+  "explain": "意气风发，宜出远门会友。"
+}

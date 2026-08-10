@@ -1,0 +1,8 @@
+{
+  "category": "ji",
+  "name": "忌争斗",
+  "effects": {
+    "outgoing_damage": 0.08,
+    "incoming_damage": -0.05
+  }
+}

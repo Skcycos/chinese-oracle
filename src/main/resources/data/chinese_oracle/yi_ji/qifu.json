@@ -1,0 +1,7 @@
+{
+  "category": "yi",
+  "name": "祈福",
+  "effects": {
+    "incoming_damage": -0.03
+  }
+}

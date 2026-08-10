@@ -1,0 +1,7 @@
+{
+  "min_tier": "ping",
+  "max_tier": "zhong_ji",
+  "poem": ["筑土成城根基固", "安居乐业福绵长"],
+  "explain": "宜大兴土木，稳固基业。",
+  "prefer_yi": ["yingzao"]
+}

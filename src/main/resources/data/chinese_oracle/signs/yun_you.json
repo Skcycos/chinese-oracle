@@ -1,0 +1,7 @@
+{
+  "min_tier": "ping",
+  "max_tier": "xiao_ji",
+  "poem": ["云游四海访名山", "踏遍天涯不觉远"],
+  "explain": "天地广阔，宜结伴远行。",
+  "prefer_yi": ["yuanxing"]
+}

@@ -1,0 +1,7 @@
+{
+  "min_tier": "xiao_xiong",
+  "max_tier": "zhong_xiong",
+  "poem": ["拒网不撒守清波", "鱼儿自在水云间"],
+  "explain": "今日不宜渔猎，空手而归。",
+  "prefer_ji": ["muyu_ji"]
+}

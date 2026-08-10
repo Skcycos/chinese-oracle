@@ -1,0 +1,7 @@
+{
+  "min_tier": "da_ji",
+  "max_tier": "zhong_ji",
+  "poem": ["苍龙出海翻云雨", "所向披靡谁敢当"],
+  "explain": "锋芒正盛，宜趁势出击。",
+  "prefer_yi": ["zhengfa"]
+}

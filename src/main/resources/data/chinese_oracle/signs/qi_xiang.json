@@ -1,0 +1,8 @@
+{
+  "min_tier": "xiao_xiong",
+  "max_tier": "da_xiong",
+  "poem": ["七香缭绕净心神", "闭门谢客不争锋"],
+  "explain": "宜焚香静心，忌争斗。",
+  "prefer_yi": ["qifu"],
+  "prefer_ji": ["zhengdou"]
+}

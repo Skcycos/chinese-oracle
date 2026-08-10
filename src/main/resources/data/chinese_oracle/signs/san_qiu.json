@@ -1,0 +1,7 @@
+{
+  "min_tier": "zhong_ji",
+  "max_tier": "xiao_ji",
+  "poem": ["三秋丰收仓廪实", "五湖渔获满船归"],
+  "explain": "收成在望，宜渔猎挖矿。",
+  "prefer_yi": ["muyu", "kaikuang"]
+}

@@ -1,0 +1,7 @@
+{
+  "min_tier": "ping",
+  "max_tier": "xiao_ji",
+  "poem": ["望月思乡夜已深", "归家安枕梦香甜"],
+  "explain": "宜归家安睡，养精蓄锐。",
+  "prefer_yi": ["anmian"]
+}

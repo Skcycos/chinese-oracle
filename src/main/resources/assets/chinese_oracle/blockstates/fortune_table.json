@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "chinese_oracle:block/fortune_table"
+    }
+  }
+}

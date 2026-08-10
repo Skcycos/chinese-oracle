@@ -1,0 +1,7 @@
+{
+  "min_tier": "zhong_xiong",
+  "max_tier": "da_xiong",
+  "poem": ["断雨收竿早回家", "风急浪高莫恋鱼"],
+  "explain": "诸事不利，忌渔猎祈福。",
+  "prefer_ji": ["muyu_ji", "qifu_ji"]
+}

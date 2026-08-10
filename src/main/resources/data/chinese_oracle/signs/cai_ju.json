@@ -1,0 +1,6 @@
+{
+  "min_tier": "ping",
+  "max_tier": "xiao_ji",
+  "poem": ["采菊东篱下", "悠然见南山"],
+  "explain": "宜亲近自然，养心静气。"
+}

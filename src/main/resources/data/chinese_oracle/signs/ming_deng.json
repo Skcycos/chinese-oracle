@@ -1,0 +1,7 @@
+{
+  "min_tier": "xiao_ji",
+  "max_tier": "ping",
+  "poem": ["明灯照路不迷津", "远行千里有归程"],
+  "explain": "路运顺遂，宜远行出游。",
+  "prefer_yi": ["yuanxing"]
+}

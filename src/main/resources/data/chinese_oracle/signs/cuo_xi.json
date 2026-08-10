@@ -1,0 +1,7 @@
+{
+  "min_tier": "ping",
+  "max_tier": "xiao_xiong",
+  "poem": ["错席不卧守旧榻", "一夜安眠到天明"],
+  "explain": "宜守原床位，忌挪动安床。",
+  "prefer_ji": ["anchuang"]
+}

@@ -1,0 +1,7 @@
+{
+  "min_tier": "xiao_xiong",
+  "max_tier": "zhong_xiong",
+  "poem": ["守位待时莫强求", "一忍能消百日忧"],
+  "explain": "宜隐忍守成，忌争斗。",
+  "prefer_ji": ["zhengdou"]
+}

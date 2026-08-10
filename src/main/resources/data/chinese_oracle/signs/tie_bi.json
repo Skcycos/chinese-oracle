@@ -1,0 +1,7 @@
+{
+  "min_tier": "zhong_ji",
+  "max_tier": "xiao_ji",
+  "poem": ["铁臂开山不怕难", "一锤下去见青天"],
+  "explain": "手气正旺，宜挖矿筑屋。",
+  "prefer_yi": ["kaikuang", "yingzao"]
+}

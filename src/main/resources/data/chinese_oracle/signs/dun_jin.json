@@ -1,0 +1,7 @@
+{
+  "min_tier": "zhong_xiong",
+  "max_tier": "da_xiong",
+  "poem": ["钝金藏锋敛锋芒", "避其锐气待时光"],
+  "explain": "锋镝不宜，忌争斗动土。",
+  "prefer_ji": ["zhengdou", "dongtu"]
+}

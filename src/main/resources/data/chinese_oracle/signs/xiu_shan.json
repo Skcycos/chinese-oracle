@@ -1,0 +1,7 @@
+{
+  "min_tier": "zhong_xiong",
+  "max_tier": "xiao_xiong",
+  "poem": ["休山养林护地气", "莫动土石犯煞机"],
+  "explain": "宜静养，忌破土动工。",
+  "prefer_ji": ["dongtu"]
+}

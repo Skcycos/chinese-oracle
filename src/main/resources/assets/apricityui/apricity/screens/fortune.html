@@ -1,0 +1,353 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="aui-font-mode" content="web">
+    <meta name="aui-viewport" content="mode=browser,zoom=2.5,min-zoom=0.5,max-zoom=3,zoom-step=0.1,user-scalable=true">
+    <meta name="aui-mouse-events" content="intercept">
+    <style>
+        :root {
+            --paper: #f5eddc;
+            --paper-deep: #e9dcc1;
+            --ink: #332b25;
+            --muted: #786b5b;
+            --red: #a9362d;
+            --red-dark: #772a24;
+            --gold: #b1873a;
+            --green: #426c4a;
+            --line: #d4bf91;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            color: var(--ink);
+            background: transparent;
+            font-family: "Kaiti SC", "KaiTi", "STKaiti", "SimSun", "Songti SC", "Noto Serif CJK SC", serif;
+        }
+
+        .fortune-card {
+            width: 78%;
+            max-width: 270px;
+            min-width: 218px;
+            padding: 6px;
+            border: 1px solid rgba(50, 36, 24, .65);
+            border-radius: 14px;
+            background: rgba(245, 237, 220, .97);
+            box-shadow: 0 8px 24px rgba(10, 8, 6, .4);
+            animation: card-in .38s ease-out both;
+        }
+
+        .paper {
+            padding: 11px 12px 9px;
+            border: 1px solid var(--line);
+            border-radius: 9px;
+            background: rgba(255, 250, 239, .82);
+        }
+
+        .brand-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--red-dark);
+            font-size: 9px;
+            letter-spacing: 1px;
+            text-align: center;
+            animation: fade-in .35s ease-out .08s both;
+        }
+
+        .mc-icon {
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+        }
+
+        .brand-rule {
+            width: 58%;
+            height: 1px;
+            margin: 7px auto 8px;
+            background: var(--line);
+        }
+
+        .title {
+            margin: 0;
+            color: var(--red);
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 4px;
+            text-align: center;
+            animation: title-in .4s ease-out .12s both;
+        }
+
+        .subtitle {
+            margin-top: 3px;
+            color: var(--muted);
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-align: center;
+            animation: fade-in .35s ease-out .2s both;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 11px 0 9px;
+            animation: rise-in .4s ease-out .24s both;
+        }
+
+        .tier {
+            max-width: 170px;
+            color: var(--red);
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            line-height: 1.1;
+        }
+
+        .tier.mid { color: #876a22; }
+        .tier.bad { color: #56473a; }
+
+        .seal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            margin-left: 9px;
+            padding: 2px;
+            border: 2px solid var(--red-dark);
+            border-radius: 5px;
+            color: var(--paper);
+            background: var(--red);
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0;
+            line-height: 1.05;
+            text-align: center;
+            white-space: pre-line;
+            animation: seal-in .42s cubic-bezier(.2, .8, .3, 1.2) .35s both;
+        }
+
+        .seal.seal-single { font-size: 22px; }
+        .seal.seal-multi { font-size: 13px; }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: -1px 0 9px;
+            animation: fade-in .35s ease-out .42s both;
+        }
+
+        .chip {
+            margin: 2px;
+            padding: 3px 6px;
+            border: 1px solid var(--gold);
+            border-radius: 999px;
+            color: var(--red-dark);
+            background: rgba(177, 135, 58, .08);
+            font-size: 9px;
+            line-height: 1.15;
+        }
+
+        .advice {
+            display: flex;
+            align-items: stretch;
+            margin: 0 -2px 9px;
+            animation: rise-in .4s ease-out .5s both;
+        }
+
+        .advice-panel {
+            flex: 1;
+            min-width: 0;
+            margin: 0 2px;
+            padding: 6px 7px;
+            border: 1px solid var(--line);
+            border-radius: 7px;
+            background: rgba(255, 251, 239, .72);
+        }
+
+        .advice-panel.yi { border-top: 3px solid var(--red); }
+        .advice-panel.ji { border-top: 3px solid #56473a; }
+
+        .advice-label {
+            margin-bottom: 3px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .advice-panel.yi .advice-label { color: var(--red); }
+        .advice-panel.ji .advice-label { color: #56473a; }
+
+        .advice-text {
+            min-height: 17px;
+            color: var(--muted);
+            font-size: 10px;
+            line-height: 1.35;
+            word-break: break-word;
+        }
+
+        .poem-box {
+            padding: 8px 7px 7px;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            border-radius: 5px;
+            background: rgba(234, 220, 193, .22);
+            text-align: center;
+            animation: rise-in .42s ease-out .62s both;
+        }
+
+        .poem-label {
+            margin-bottom: 3px;
+            color: var(--gold);
+            font-size: 9px;
+            letter-spacing: 3px;
+        }
+
+        .poem {
+            color: var(--ink);
+            font-size: 14px;
+            line-height: 1.55;
+            white-space: pre-line;
+        }
+
+        .explain {
+            display: none;
+            margin-top: 7px;
+            padding: 6px 7px;
+            border-left: 3px solid var(--gold);
+            border-radius: 4px;
+            color: var(--muted);
+            background: rgba(234, 220, 193, .3);
+            font-size: 10px;
+            line-height: 1.4;
+            text-align: left;
+        }
+
+        .explain.open {
+            display: block;
+            height: 0;
+            overflow: hidden;
+            animation: explain-grow .3s ease-out both;
+        }
+
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 8px;
+            padding-top: 10px;
+            color: #927f62;
+            border-top: 1px dashed var(--line);
+            font-size: 9px;
+            animation: fade-in .35s ease-out .76s both;
+        }
+
+        .action-button {
+            padding: 3px 7px;
+            border: 1px solid var(--gold);
+            border-radius: 999px;
+            color: var(--red-dark);
+            background: transparent;
+            font-size: 9px;
+        }
+
+        .action-button:hover,
+        .action-button:active {
+            color: var(--paper);
+            background: var(--red);
+        }
+
+        @keyframes card-in {
+            from { opacity: 0; transform: translateY(10px) scale(.985); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        @keyframes title-in {
+            from { opacity: 0; transform: translateY(-5px); letter-spacing: 8px; }
+            to { opacity: 1; transform: translateY(0); letter-spacing: 4px; }
+        }
+
+        @keyframes rise-in {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+        @keyframes seal-in {
+            0% { opacity: 0; transform: rotate(-6deg) scale(1.25); }
+            70% { opacity: 1; transform: rotate(1deg) scale(.96); }
+            100% { opacity: 1; transform: rotate(0) scale(1); }
+        }
+
+        @keyframes explain-grow {
+            from { height: 0; opacity: 0; }
+            to { height: 44px; opacity: 1; }
+        }
+
+        @media (max-width: 560px) {
+            .fortune-card { width: 86%; }
+            .tier { font-size: 23px; }
+            .title { font-size: 18px; letter-spacing: 3px; }
+            .poem { font-size: 13px; }
+        }
+    </style>
+</head>
+<body>
+    <main class="fortune-card">
+        <section class="paper">
+            <div class="brand-row">
+                <texture class="mc-icon" src="minecraft:textures/item/lantern.png"/>
+                <span>食韵筑家Ⅲ · 烟火长歌</span>
+            </div>
+            <div class="brand-rule"></div>
+            <h1 class="title" id="aui-title">今日黄历</h1>
+            <div class="subtitle">今日签 · 趋吉避凶 · 民俗娱乐</div>
+
+            <div class="hero">
+                <span class="tier" id="aui-tier">—</span>
+                <span class="seal" id="aui-seal"></span>
+            </div>
+
+            <div class="meta">
+                <span class="chip" id="aui-shichen"></span>
+                <span class="chip" id="aui-solar"></span>
+                <span class="chip" id="aui-festival"></span>
+                <span class="chip" id="aui-wuxing"></span>
+            </div>
+
+            <div class="advice">
+                <div class="advice-panel yi">
+                    <div class="advice-label">宜</div>
+                    <div class="advice-text" id="aui-yi">暂无</div>
+                </div>
+                <div class="advice-panel ji">
+                    <div class="advice-label">忌</div>
+                    <div class="advice-text" id="aui-ji">暂无</div>
+                </div>
+            </div>
+
+            <div class="poem-box">
+                <div class="poem-label">签 · 文</div>
+                <div class="poem" id="aui-poem"></div>
+            </div>
+            <div class="explain" id="aui-explain"></div>
+
+            <div class="footer">
+                <span id="aui-day"></span>
+                <button class="action-button" id="aui-toggle" type="button">展开解签</button>
+                <span>Esc 关闭</span>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

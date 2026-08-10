@@ -1,0 +1,7 @@
+{
+  "min_tier": "ping",
+  "max_tier": "xiao_xiong",
+  "poem": ["节俭持家福自留", "开源节流两不愁"],
+  "explain": "宜省俭度日，忌大额求财。",
+  "prefer_ji": ["qiucai_ji"]
+}

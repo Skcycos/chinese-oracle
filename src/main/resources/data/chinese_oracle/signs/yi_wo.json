@@ -1,0 +1,7 @@
+{
+  "min_tier": "zhong_ji",
+  "max_tier": "ping",
+  "poem": ["一卧到天明不醒", "精神饱满气自盈"],
+  "explain": "睡得安稳，宜安心就寝。",
+  "prefer_yi": ["anmian"]
+}
