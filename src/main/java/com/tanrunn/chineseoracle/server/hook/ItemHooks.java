@@ -2,10 +2,10 @@ package com.tanrunn.chineseoracle.server.hook;
 
 import com.tanrunn.chineseoracle.ChineseOracleMod;
 import com.tanrunn.chineseoracle.Config;
+import com.tanrunn.chineseoracle.api.ChineseOracleApi;
 import com.tanrunn.chineseoracle.server.fortune.DayService;
 import com.tanrunn.chineseoracle.server.fortune.FortuneData;
 import com.tanrunn.chineseoracle.server.fortune.FortuneService;
-import com.tanrunn.chineseoracle.server.network.FortuneNetwork;
 import com.tanrunn.chineseoracle.server.registry.ModItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
@@ -38,8 +38,7 @@ public class ItemHooks {
     }
 
     private static void showFortune(ServerPlayer player) {
-        var snapshot = FortuneService.getSnapshot(player);
-        FortuneNetwork.showFortune(player, snapshot, player.server);
+        ChineseOracleApi.openAlmanac(player);
     }
 
     private static void useIncense(ServerPlayer player, ItemStack stack) {

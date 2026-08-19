@@ -6,6 +6,7 @@ import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.tanrunn.chineseoracle.ChineseOracleMod;
 import com.tanrunn.chineseoracle.Config;
+import com.tanrunn.chineseoracle.api.ChineseOracleApi;
 import com.tanrunn.chineseoracle.common.FortuneSnapshot;
 import com.tanrunn.chineseoracle.server.fortune.DayService;
 import com.tanrunn.chineseoracle.server.fortune.FortuneService;
@@ -34,9 +35,9 @@ public final class OracleCommand {
 
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
         var oracle = dispatcher.register(Commands.literal("oracle")
-                .executes(ctx -> show(ctx, self(ctx)))
+                .executes(ctx -> showSelf(ctx))
                 .then(Commands.literal("me")
-                        .executes(ctx -> show(ctx, self(ctx))))
+                        .executes(ctx -> showSelf(ctx)))
                 .then(Commands.literal("share")
                         .executes(ctx -> share(ctx)))
                 .then(Commands.literal("player")
@@ -69,8 +70,10 @@ public final class OracleCommand {
         LAST_SHARE.remove(player.getUUID());
     }
 
-    private static ServerPlayer self(CommandContext<CommandSourceStack> ctx) throws CommandSyntaxException {
-        return ctx.getSource().getPlayerOrException();
+    /** /oracle 与 /oracle me：打开自己的今日黄历（汇聚到公开 API）。 */
+    private static int showSelf(CommandContext<CommandSourceStack> ctx) throws CommandSyntaxException {
+        ServerPlayer player = ctx.getSource().getPlayerOrException();
+        return ChineseOracleApi.openAlmanac(player) ? 1 : 0;
     }
 
     private static int share(CommandContext<CommandSourceStack> ctx) throws CommandSyntaxException {

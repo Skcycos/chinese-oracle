@@ -108,6 +108,13 @@ neoForge {
             sourceSet(sourceSets.main)
         }
     }
+
+    // JUnit 测试接入游戏运行环境：让测试可以使用真实 Minecraft 类
+    // （如公开 API 守卫行为的 mock 玩家）。
+    unitTest {
+        enable()
+        testedMod = mods.named("${mod_id}")
+    }
 }
 
 // Sets up a dependency configuration called 'localRuntime'.
@@ -120,13 +127,15 @@ configurations {
 
 dependencies {
     // ApricityUI 联动 (NeoForge 1.21.1)
-    compileOnly "com.sighs:ApricityUI-neoforge-1.21.1:1.2.1"
+    compileOnly "com.sighs:ApricityUI-neoforge-1.21.1:1.2.3.1"
 
     // Unit tests for the pure draw/modifier logic (design document section 8.8).
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     // Gson is bundled with Minecraft but not exposed on the plain unit-test classpath.
     testImplementation 'com.google.code.gson:gson:2.10.1'
+    // 需要真实 Minecraft 类的测试（如 API 守卫行为的 mock 玩家）。
+    testImplementation 'org.mockito:mockito-core:5.12.0'
 }
 
 test {
